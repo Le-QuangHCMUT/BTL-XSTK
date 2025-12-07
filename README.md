@@ -10,29 +10,50 @@ Nội dung được chia thành các phần rõ ràng theo từng loại kiểm 
 Toàn bộ phân tích trong notebook sử dụng dữ liệu từ:  
 
 👉 [Transactional Retail Dataset of Electronics Store (dirty_data.csv) — Kaggle]  
-(https://www.kaggle.com/datasets/muhammadshahrayar/transactional-retail-dataset-of-electronics-store?select=dirty_data.csv)  
+(https://www.kaggle.com/datasets/muhammadshahrayar/transactional-retail-dataset-of-electronics-store?select=dirty_data.csv)
 
-Dataset được sử dụng trong:
+Dataset được dùng trong:
+- Thống kê mô tả  
 - Kiểm định 1 mẫu  
 - Kiểm định 2 mẫu  
 - ANOVA  
 - Hồi quy đa biến  
 
-Bạn hãy đảm bảo rằng file `dirty_data.csv` được tải xuống và đặt đúng đường dẫn mà notebook sử dụng — hoặc sửa lại đường dẫn trong lệnh `read_csv()` / `read.table()` cho đúng.
+Hãy đảm bảo file `dirty_data.csv` được tải xuống và đặt đúng đường dẫn mà notebook sử dụng.
 
 ---
 
 ## 📌 Nội dung chính
 
 ### 1. Import thư viện và dữ liệu
-Notebook bắt đầu bằng việc:
+Notebook bắt đầu bằng:
 - Nạp các thư viện R: `readr`, `car`, `ggplot2`, …
-- Đọc dữ liệu đầu vào từ file CSV  
+- Đọc dữ liệu từ file CSV
 
 ---
 
-### 2. Kiểm định 1 mẫu
-Thực hiện các phép kiểm định 1 mẫu:
+### 2. Thống kê mô tả (Descriptive Statistics)
+Phần thống kê mô tả được thực hiện đầu tiên nhằm hiểu tổng quan dữ liệu:
+
+Bao gồm:
+- Tính các thống kê cơ bản:  
+  - Mean  
+  - Median  
+  - Min – Max  
+  - Variance, Std. Deviation  
+- Tần suất (frequency) cho các biến phân loại  
+- Quan sát dữ liệu thiếu, dữ liệu lỗi  
+- Vẽ biểu đồ mô tả:  
+  - Histogram  
+  - Boxplot  
+  - Bar chart  
+
+Mục tiêu: nhận diện phân phối dữ liệu và phát hiện outliers hoặc bất thường trước khi tiến hành kiểm định.
+
+---
+
+### 3. Kiểm định 1 mẫu
+Bao gồm:
 - One-sample t-test  
 - Thiết lập giả thuyết  
 - Tính thống kê kiểm định  
@@ -40,51 +61,57 @@ Thực hiện các phép kiểm định 1 mẫu:
 
 ---
 
-### 3. Kiểm định 2 mẫu
+### 4. Kiểm định 2 mẫu
 Bao gồm:
 - Independent 2-sample t-test  
-- Paired t-test (nếu dữ liệu phù hợp)  
-- Kiểm định phương sai (var.test) khi cần  
-- Diễn giải kết quả  
+- Paired t-test  
+- Kiểm định phương sai (var.test)  
+- Diễn giải và kết luận  
 
 ---
 
-### 4. Kiểm định ANOVA
+### 5. Kiểm định ANOVA
 Thực hiện:
 - One-way ANOVA  
-- Kiểm tra các giả định:
-  - Phân phối chuẩn
-  - Đồng nhất phương sai (Levene test – từ thư viện `car`)
-- Nếu ANOVA có ý nghĩa → tiến hành Post-hoc (TukeyHSD)  
+- Kiểm tra giả định:
+  - Phân phối chuẩn  
+  - Đồng nhất phương sai (Levene test – `car`)  
+- Post-hoc (TukeyHSD)
 
 ---
 
-### 5. Hồi quy đa biến
+### 6. Hồi quy đa biến
 Phân tích:
 - Xây dựng mô hình hồi quy tuyến tính nhiều biến  
-- Ước lượng hệ số, kiểm định ý nghĩa  
-- Kiểm tra giả định mô hình:
-  - Residuals (phân phối chuẩn, homoscedasticity)
+- Kiểm định ý nghĩa hệ số  
+- Kiểm tra giả định:
+  - Residuals  
+  - Homoscedasticity  
   - Đa cộng tuyến (VIF)  
-- Đánh giá mô hình bằng R² / Adjusted R²  
+- Đánh giá bằng R² / Adjusted R²  
 
 ---
 
 ## 🛠 Công nghệ sử dụng
-- **R**  
-- **Jupyter Notebook**  
-- Các thư viện:
+- **R**
+- **Jupyter Notebook**
+- Thư viện:
   - `readr`
   - `car`
   - `ggplot2`
-  - `stats`  
+  - `stats`
 
 ---
 
 ## 📂 Cách chạy notebook
-1. Tải file `dirty_data.csv` từ Kaggle link ở trên.  
-2. Đặt file đúng trong thư mục mà notebook trông tới hoặc adjust lại đường dẫn trong lệnh đọc dữ liệu.  
-3. Cài đặt R kernel cho Jupyter (nếu chưa có).  
-4. Mở file `BTL_XSTK.ipynb` và chạy tuần tự các cell.  
+1. Tải file `dirty_data.csv` từ Kaggle.  
+2. Đặt file đúng đường dẫn mà notebook sử dụng (hoặc điều chỉnh lại trong lệnh đọc dữ liệu).  
+3. Cài R kernel cho Jupyter.  
+4. Chạy các cell theo thứ tự từ trên xuống.
+
+---
+
+## 👤 Tác giả
+Bài làm thuộc bài tập lớn môn Xác suất – Thống kê.
 
 ---
