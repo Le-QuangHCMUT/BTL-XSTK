@@ -1,4 +1,4 @@
-# BTL_XSTK – Bài tập lớn Xác suất Thống kê
+# BTL_XSTK – Bài tập lớn Xác & suất Thống kê
 
 Repository này chứa notebook **BTL_XSTK.ipynb**, được viết bằng **R trong Jupyter Notebook**, thực hiện các phân tích thống kê cơ bản đến nâng cao.  
 Nội dung được chia thành các phần rõ ràng theo từng loại kiểm định và mô hình phân tích.
