@@ -10,7 +10,7 @@ Nội dung được chia thành các phần rõ ràng theo từng loại kiểm 
 Toàn bộ phân tích trong notebook sử dụng dữ liệu từ:  
 
 👉 [Transactional Retail Dataset of Electronics Store (dirty_data.csv) — Kaggle]  
-(https://www.kaggle.com/datasets/muhammadshahrayar/transactional-retail-dataset-of-electronics-store?select=dirty_data.csv)
+[dirty_data.csv – Kaggle](https://www.kaggle.com/datasets/muhammadshahrayar/transactional-retail-dataset-of-electronics-store?select=dirty_data.csv)
 
 Dataset được dùng trong:
 - Thống kê mô tả  
@@ -100,18 +100,5 @@ Phân tích:
   - `car`
   - `ggplot2`
   - `stats`
-
----
-
-## 📂 Cách chạy notebook
-1. Tải file `dirty_data.csv` từ Kaggle.  
-2. Đặt file đúng đường dẫn mà notebook sử dụng (hoặc điều chỉnh lại trong lệnh đọc dữ liệu).  
-3. Cài R kernel cho Jupyter.  
-4. Chạy các cell theo thứ tự từ trên xuống.
-
----
-
-## 👤 Tác giả
-Bài làm thuộc bài tập lớn môn Xác suất – Thống kê.
 
 ---
